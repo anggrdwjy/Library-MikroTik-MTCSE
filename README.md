@@ -7,7 +7,7 @@
 - [Modul 3 - Serangan pada Lapisan OSI](#3-modul-3-serangan-pada-lapisan-osi)
 - [Modul 4 - Kriptografi](#4-modul-4-kriptografi)
 - [Modul 5 - Pengamanan Router](#5-modul-5-pengamanan-router)
-- [Modul 6 - Tunnel](#6-modul-6-tunnel-aman)
+- [Modul 6 - Tunnel](#6-modul-6-tunnel)
 
 ## 1. Modul 1 - Konfigurasi Dasar
 
