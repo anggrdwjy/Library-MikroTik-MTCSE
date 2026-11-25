@@ -490,7 +490,7 @@ Kantor pusat di Jakarta (192.168.88.0/24) dan cabang di Surabaya (192.168.99.0/2
 ```
 
 
-### Perbandingan RouterOS v6 dan v7 — `Tunnel` Aman
+### Perbandingan RouterOS v6 dan v7 — Tunnel
 
 | Aspek | RouterOS v6 | RouterOS v7 | Catatan |
 |---|---|---|---|
