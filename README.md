@@ -9,7 +9,7 @@
 - [Modul 5 — Pengamanan Router](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#5-modul-5--pengamanan-router)
 - [Modul 6 — Tunnel](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#6-modul-6--tunnel-aman)
 
-## 1. Modul 1 - Konfigurasi Dasar
+## 1. Modul 1 — Konfigurasi Dasar
 
 ### Studi Kasus
 Sebuah kantor kecil menggunakan `password` administrator bawaan dan seluruh layanan berada dalam keadaan aktif. Botnet melakukan pemindaian terhadap Internet, menemukan port WinBox 8291 yang terbuka, menguji `password` yang lemah, dan dalam kurun waktu satu hari router tersebut menjadi bagian dari botnet.
