@@ -2,12 +2,12 @@
 
 ## Daftar Isi
 
-- [Modul 1 - Konfigurasi Dasar](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#1-modul-1-konfigurasi-dasar)
-- [Modul 2 - Firewall](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#2-modul-2-firewall)
-- [Modul 3 - Serangan pada Lapisan OSI](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#3-modul-3-serangan-pada-lapisan-osi)
-- [Modul 4 - Kriptografi](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#4-modul-4-kriptografi)
-- [Modul 5 - Pengamanan Router](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#5-modul-5-pengamanan-router)
-- [Modul 6 - Tunnel](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#6-modul-6-tunnel-aman)
+- [Modul 1 - Konfigurasi Dasar](#1-modul-1-konfigurasi-dasar)
+- [Modul 2 - Firewall](#2-modul-2-firewall)
+- [Modul 3 - Serangan pada Lapisan OSI](#3-modul-3-serangan-pada-lapisan-osi)
+- [Modul 4 - Kriptografi](#4-modul-4-kriptografi)
+- [Modul 5 - Pengamanan Router](#5-modul-5-pengamanan-router)
+- [Modul 6 - Tunnel](#6-modul-6-tunnel-aman)
 
 ## 1. Modul 1 - Konfigurasi Dasar
 
