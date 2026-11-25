@@ -392,9 +392,9 @@ ssh -D 1080 netadmin@IP-PUBLIK-ROUTER -p 2222
 
 > Catatan: Port knocking dan SSH tunnel tidak bergantung pada versi RouterOS, sehingga konfigurasi dapat digunakan pada kedua versi tanpa perubahan.
 
-## 6. Modul 6 — Terowongan Aman
+## 6. Modul 6 — Tunnel Aman
 
-**Tujuan:** Membangun terowongan aman: IPsec Site-to-Site, L2TP+IPsec, dan SSTP dengan sertifikat.
+**Tujuan:** Membangun Tunnel aman: IPsec Site-to-Site, L2TP+IPsec, dan SSTP dengan sertifikat.
 
 | Kebutuhan | Pilihan | Alasan |
 |---|---|---|
@@ -442,7 +442,7 @@ Kantor pusat Jakarta (192.168.88.0/24) dan cabang Surabaya (192.168.99.0/24) per
 /ppp active print
 ```
 
-### Pemecahan Masalah Terowongan
+### Pemecahan Masalah Tunnel
 - **IPsec tidak terhubung:** Periksa waktu (NTP), periksa kesamaan PSK, periksa firewall 500/4500 UDP, dan periksa log `/log print where topics~ipsec`.
 - **L2TP terhubung tetapi tidak dapat ping LAN:** Periksa firewall forward dan NAT — jangan melakukan NAT terhadap lalu lintas VPN ke LAN.
 - **SSTP gagal:** Periksa masa berlaku sertifikat, periksa kesesuaian hostname dengan CN, dan periksa port 443.
@@ -452,7 +452,7 @@ Kantor pusat Jakarta (192.168.88.0/24) dan cabang Surabaya (192.168.99.0/24) per
 /tool netwatch add host=192.168.99.1 interval=30s up-script=":log info \"Tunnel SBY UP\"" down-script=":log warning \"Tunnel SBY DOWN\""
 ```
 
-### Perbandingan RouterOS v6 dan v7 — Terowongan Aman
+### Perbandingan RouterOS v6 dan v7 — Tunnel Aman
 
 | Aspek | RouterOS v6 | RouterOS v7 | Catatan |
 |---|---|---|---|
