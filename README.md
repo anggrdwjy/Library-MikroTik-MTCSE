@@ -2,14 +2,14 @@
 
 ## Daftar Isi
 
-- [Modul 1 — Konfigurasi Dasar](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#1-modul-1--konfigurasi-dasar)
-- [Modul 2 — Firewall](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#2-modul-2--firewall)
-- [Modul 3 — Serangan pada Lapisan OSI](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#3-modul-3--serangan-pada-lapisan-osi)
-- [Modul 4 — Kriptografi](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#4-modul-4--kriptografi)
-- [Modul 5 — Pengamanan Router](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#5-modul-5--pengamanan-router)
-- [Modul 6 — Tunnel](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#6-modul-6--tunnel-aman)
+- [Modul 1 - Konfigurasi Dasar](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#1-modul-1-konfigurasi-dasar)
+- [Modul 2 - Firewall](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#2-modul-2-firewall)
+- [Modul 3 - Serangan pada Lapisan OSI](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#3-modul-3-serangan-pada-lapisan-osi)
+- [Modul 4 - Kriptografi](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#4-modul-4-kriptografi)
+- [Modul 5 - Pengamanan Router](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#5-modul-5-pengamanan-router)
+- [Modul 6 - Tunnel](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#6-modul-6-tunnel-aman)
 
-## 1. Modul 1 — Konfigurasi Dasar
+## 1. Modul 1 - Konfigurasi Dasar
 
 ### Studi Kasus
 Sebuah kantor kecil menggunakan `password` administrator bawaan dan seluruh layanan berada dalam keadaan aktif. Botnet melakukan pemindaian terhadap Internet, menemukan port WinBox 8291 yang terbuka, menguji `password` yang lemah, dan dalam kurun waktu satu hari router tersebut menjadi bagian dari botnet.
@@ -81,7 +81,7 @@ Sebuah kantor kecil menggunakan `password` administrator bawaan dan seluruh laya
 
 > Catatan: Perbedaan utama pada modul ini terletak pada NTP. Selain itu, sintaks konfigurasi dasar pada RouterOS v6 dan RouterOS v7 sebagian besar identik, sehingga migrasi dapat dilakukan dengan penyesuaian minimal.
 
-## 2. Modul 2 — Firewall
+## 2. Modul 2 - Firewall
 
 **Tujuan:** Menguasai alur paket, firewall stateful, tabel RAW, mitigasi SYN flood, praktik terbaik akses manajemen, deteksi serangan terhadap layanan kritis, filter bridge, dan penyaringan ICMP.
 
@@ -183,7 +183,7 @@ Sebuah server di LAN menyebabkan CPU router mencapai 100 persen, Internet melamb
 
 > Catatan: Untuk firewall, sebagian besar `rule` dapat disalin secara langsung dari RouterOS v6 ke RouterOS v7. Perbedaan utama hanya terdapat pada peng`rule` connection tracking dan kinerja IPv6.
 
-## 3. Modul 3 — Serangan pada Lapisan OSI
+## 3. Modul 3 - Serangan pada Lapisan OSI
 
 **Tujuan:** Mengenali dan mencegah serangan per protokol: MNDP, DHCP, TCP, UDP, ICMP, brute-force, dan port scan.
 
@@ -270,7 +270,7 @@ Log dipenuhi kegagalan login untuk `user` admin, root, dan test dari alamat IP l
 
 > Catatan: Pada modul ini, konfigurasi RouterOS v6 dan RouterOS v7 dapat dipertukarkan. Perbedaan terletak pada kinerja DHCP dan pen`log`, bukan pada sintaks.
 
-## 4. Modul 4 — Kriptografi
+## 4. Modul 4 - Kriptografi
 
 **Tujuan:** Memahami enkripsi, algoritma simetris dan asimetris, PKI, dan sertifikat, kemudian menggunakannya pada RouterOS.
 
@@ -347,7 +347,7 @@ WebFig masih menggunakan HTTP. Administrator masuk dari WiFi kantor yang sama de
 
 > Catatan: Apabila RouterOS v6 digunakan pada lingkungan produksi, perpanjangan sertifikat wajib dijadwalkan secara manual. Pada RouterOS v7, perpanjangan Let's Encrypt dapat dilakukan melalui perintah yang sama.
 
-## 5. Modul 5 — Pengamanan Router
+## 5. Modul 5 - Pengamanan Router
 
 **Tujuan:** Mengamankan router itu sendiri: port knocking, koneksi aman, port bawaan, dan `tunneling` melalui SSH.
 
@@ -429,9 +429,9 @@ ssh -D 1080 netadmin@IP-PUBLIK-ROUTER -p 2222
 
 > Catatan: Port knocking dan `tunnel` SSH tidak bergantung pada versi RouterOS, sehingga konfigurasi dapat digunakan pada kedua versi tanpa perubahan.
 
-## 6. Modul 6 — `Tunnel` Aman
+## 6. Modul 6 - Tunnel
 
-**Tujuan:** Membangun `tunnel` aman: IPsec Site-to-Site, L2TP+IPsec, dan SSTP dengan sertifikat.
+**Tujuan:** Membangun tunnel : IPsec Site-to-Site, L2TP+IPsec, dan SSTP dengan sertifikat.
 
 | Kebutuhan | Pilihan | Alasan |
 |---|---|---|
