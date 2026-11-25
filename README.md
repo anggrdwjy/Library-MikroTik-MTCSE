@@ -446,7 +446,7 @@ Kantor pusat Jakarta (192.168.88.0/24) dan cabang Surabaya (192.168.99.0/24) per
 - **IPsec tidak terhubung:** Periksa waktu (NTP), periksa kesamaan PSK, periksa firewall 500/4500 UDP, dan periksa log `/log print where topics~ipsec`.
 - **L2TP terhubung tetapi tidak dapat ping LAN:** Periksa firewall forward dan NAT — jangan melakukan NAT terhadap lalu lintas VPN ke LAN.
 - **SSTP gagal:** Periksa masa berlaku sertifikat, periksa kesesuaian hostname dengan CN, dan periksa port 443.
-- **Terowongan terputus-putus:** Periksa MTU / MSS. Tambahkan `/ip firewall mangle add chain=forward protocol=tcp tcp-flags=syn action=change-mss new-mss=1360`
+- **Tunnel terputus-putus:** Periksa MTU / MSS. Tambahkan `/ip firewall mangle add chain=forward protocol=tcp tcp-flags=syn action=change-mss new-mss=1360`
 
 ```
 /tool netwatch add host=192.168.99.1 interval=30s up-script=":log info \"Tunnel SBY UP\"" down-script=":log warning \"Tunnel SBY DOWN\""
@@ -506,30 +506,13 @@ Kantor pusat Jakarta (192.168.88.0/24) dan cabang Surabaya (192.168.99.0/24) per
 
 > Catatan: Perbedaan paling signifikan pada modul ini adalah struktur IPsec. Apabila melakukan migrasi dari v6 ke v7, pisahkan konfigurasi peer v6 menjadi profile, peer, dan identity pada v7. Untuk L2TP dan SSTP, konfigurasi dapat digunakan kembali tanpa perubahan besar.
 
-## 7. Prosedur Operasional
-
-### Harian (10 Menit)
-- Periksa `/log print` — kegagalan login, daftar blokir baru, dan terowongan yang terputus.
-- Periksa `/system resource print` — CPU di bawah 70% dan memori.
-- Periksa `/ip firewall address-list print` — apakah daftar blokir membengkak secara tidak wajar?
-- Periksa `/ppp active print` dan `/ip ipsec active-peers print`
-
-### Mingguan
-- Periksa pencadangan: `/export file=backup-mingguan` dan simpan di luar router.
-- Periksa pembaruan: `/system package update check-for-updates`. Uji pembaruan di laboratorium sebelum diterapkan pada produksi.
-- Periksa sertifikat: masa berlaku kurang dari 30 hari → perpanjang.
-- Periksa pengguna: apakah masih terdapat pengguna lama atau mantan karyawan? Nonaktifkan apabila diperlukan.
-
-### Bulanan
-- Audit firewall, audit port `/ip service print`, ganti kata sandi / PSK VPN yang dibagikan, dan uji pemulihan pencadangan di laboratorium.
-
 ### Template Pencadangan
 ```
 /export file=backup-2026-11-24-sebelum-ubah-firewall
 /system backup save name=backup-2026-11-24-sebelum-ubah-firewall
 ```
 
-## 8. Panduan Penanganan Insiden
+## 7. Panduan Penanganan Insiden
 
 1. **Deteksi:** Catat waktu, alamat IP sumber, dan jenis serangan.
 2. **Isolasi:** Blokir alamat IP pelaku: `/ip firewall address-list add list=BLACKLIST address=IP-PELAKU`
@@ -540,7 +523,7 @@ Kantor pusat Jakarta (192.168.88.0/24) dan cabang Surabaya (192.168.99.0/24) per
 > Catatan: Jangan menghapus log sebelum penyelidikan selesai. Log merupakan bukti.
 
 
-## 9. Pemecahan Masalah
+## 8. Pemecahan Masalah
 
 | Gejala | Perintah Pemeriksaan |
 |---|---|
@@ -564,6 +547,3 @@ IPsec IKE 500 UDP, NAT-T 4500 UDP, ESP (IP) | L2TP 1701 UDP | SSTP 443 TCP
 ```
 MGMT, BOGON, BLACKLIST, SYN-FLOOD, SSH-BRUTE, PORT-SCANNER, KNOCK1/2/3
 ```
-
----
-*Seluruh contoh alamat IP, kata sandi, dan PSK di atas merupakan contoh — silakan ganti dengan nilai yang kuat dan rahasia di lingkungan Anda. Jangan membagikan PSK, kunci privat, atau urutan port knocking di grup umum.*
