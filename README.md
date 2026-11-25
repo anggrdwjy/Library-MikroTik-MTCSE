@@ -2,14 +2,14 @@
 
 ## Daftar Isi
 
-- [Konfigurasi Dasar — Wajib Sebelum Seluruh Modul](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#1-konfigurasi-dasar--wajib-sebelum-seluruh-modul)
+- [Modul 1 — Konfigurasi Dasar](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#1-modul-1--konfigurasi-dasar)
 - [Modul 2 — Firewall](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#2-modul-2--firewall)
 - [Modul 3 — Serangan pada Lapisan OSI](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#3-modul-3--serangan-pada-lapisan-osi)
 - [Modul 4 — Kriptografi](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#4-modul-4--kriptografi)
 - [Modul 5 — Pengamanan Router](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#5-modul-5--pengamanan-router)
 - [Modul 6 — Tunnel](https://github.com/anggrdwjy/Library-MikroTik-MTCSE#6-modul-6--tunnel-aman)
 
-## 1. Konfigurasi Dasar — Wajib Sebelum Seluruh Modul
+## 1. Modul 1 - Konfigurasi Dasar
 
 ### Studi Kasus
 Sebuah kantor kecil menggunakan `password` administrator bawaan dan seluruh layanan berada dalam keadaan aktif. Botnet melakukan pemindaian terhadap Internet, menemukan port WinBox 8291 yang terbuka, menguji `password` yang lemah, dan dalam kurun waktu satu hari router tersebut menjadi bagian dari botnet.
